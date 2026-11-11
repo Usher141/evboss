@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV BOSS | Jetour 4x4 & Deepal Electric - 2026 Collection</title>
+  <meta name="description" content="Explore EV Boss's exclusive collection of the 2026 Jetour T2 4x4 and Deepal S07 Electric luxury SUV.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Top Header & Navigation Bar
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EV Boss Official Logo -->
+      <a href="#" class="brand-link" data-target="home" onclick="navigateTo('home'); return false;" title="EV BOSS">
+        <img src="assets/ev-boss-logo-light.png" alt="EV BOSS" class="brand-logo-img">
+      </a>
+
+      <!-- Simple Navigation Menu (No 'For rent' or 'About') -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+          <li><a href="#showcase" class="nav-link" data-target="home" onclick="document.getElementById('showcaseSection').scrollIntoView({behavior: 'smooth'}); return false;">Models</a></li>
+          <li><a href="#news" class="nav-link" data-target="news">News</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons with Direct Contact Number -->
+      <div class="header-actions">
+        <a href="tel:055167104" class="header-phone-link" title="Call Concierge Directly">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          055167104
+        </a>
+
+        <button class="btn-contact trigger-contact" id="headerContactBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"/>
+          </svg>
+          CONTACT
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Cinematic Luxury Hero Stage (Reference: Maserati Style Showcase)
+       Main Image: Jetour T2 2026 | Sub Image: Deepal S07 2026
+       ======================================================================== -->
+  <section class="cinema-hero-stage" id="heroSlider">
+    <div class="hero-slider-track">
+      
+      <!-- Slide 1: Main Image - Jetour T2 2026 -->
+      <div class="hero-slide-item active" data-slide="0">
+        <div class="hero-slide-bg" style="background-image: url('assets/cars/jetour-t2-hero.jpg');"></div>
+        <div class="hero-cinema-gradient"></div>
+        <div class="hero-bottom-bar">
+          <div class="hero-meta-left">
+            <h2 class="hero-car-title">Jetour <strong>T2</strong></h2>
+            <div class="hero-v-separator"></div>
+            <p class="hero-tagline-text">Conquer Every Frontier</p>
+          </div>
+          <div class="hero-meta-right">
+            <button class="btn-hero-discover" onclick="openVehicleDetail('jetour-t2-2026')">
+              DISCOVER MORE
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="hero-controls-group">
+              <button class="hero-pause-btn" id="heroPlayPauseBtn" aria-label="Toggle slideshow playback">
+                <svg class="icon-pause" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                <svg class="icon-play" style="display:none;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <div class="hero-pagination-dots">
+                <button class="hero-p-dot active" data-index="0" aria-label="Slide 1: Jetour T2 2026 (Main Image)"></button>
+                <button class="hero-p-dot" data-index="1" aria-label="Slide 2: Deepal S07 2026 (Sub Image)"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Sub Image - Deepal S07 2026 -->
+      <div class="hero-slide-item" data-slide="1">
+        <div class="hero-slide-bg" style="background-image: url('assets/cars/deepal-s07-hero.jpg');"></div>
+        <div class="hero-cinema-gradient"></div>
+        <div class="hero-bottom-bar">
+          <div class="hero-meta-left">
+            <h2 class="hero-car-title">Deepal <strong>S07</strong></h2>
+            <div class="hero-v-separator"></div>
+            <p class="hero-tagline-text">Electric Mastery Redefined</p>
+          </div>
+          <div class="hero-meta-right">
+            <button class="btn-hero-discover" onclick="openVehicleDetail('deepal-s07-2026')">
+              DISCOVER MORE
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="hero-controls-group">
+              <div class="hero-pagination-dots">
+                <button class="hero-p-dot" data-index="0" aria-label="Slide 1: Jetour T2 2026 (Main Image)"></button>
+                <button class="hero-p-dot active" data-index="1" aria-label="Slide 2: Deepal S07 2026 (Sub Image)"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating Arrow Nav -->
+    <button class="hero-nav-arrow hero-arrow-left" id="heroPrevBtn" aria-label="Previous Vehicle">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="hero-nav-arrow hero-arrow-right" id="heroNextBtn" aria-label="Next Vehicle">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </section>
+
+  <!-- ========================================================================
+       Simple Filter Bar
+       ======================================================================== -->
+  <section class="controls-banner">
+    <div class="controls-inner">
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="tab-pill active" data-filter="all">All Models</button>
+        <button class="tab-pill" data-filter="jetour">Jetour 4x4 Series</button>
+        <button class="tab-pill" data-filter="deepal">Deepal Electric</button>
+      </div>
+
+      <!-- Simple Search Box -->
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input type="text" id="carSearch" placeholder="Search Jetour or Deepal..." autocomplete="off">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Main Showcase: Simple, Clean Model Grid
+       ======================================================================== -->
+  <main class="showcase-section" id="showcaseSection">
+    <div class="section-header">
+      <h1 class="section-title">Most attractive cars</h1>
+      <p class="section-subtitle">Exclusive 2026 Jetour 4x4 adventure series and Deepal futuristic electric line-up.</p>
+    </div>
+
+    <!-- Cars Grid Container (Only Jetour & Deepal) -->
+    <div class="cars-grid" id="carsGrid">
+      <!-- Dynamically Populated by app.js -->
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       "News" Section
+       ======================================================================== -->
+  <section class="content-section" id="newsSection">
+    <div class="page-hero">
+      <h2>EV Boss Automotive Journal</h2>
+      <p>Latest updates on the 2026 Jetour and Deepal lineup.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <article class="content-card-box" style="margin-bottom: 0;">
+        <span style="font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase;">Adventure 4x4</span>
+        <h3 style="font-size: 18px; font-weight: 800; margin: 8px 0;">2026 Jetour T2: Engineered for the Wild</h3>
+        <p style="font-size: 14px; color: var(--text-sub); line-height: 1.6;">How BorgWarner XWD intelligent four-wheel drive and rear electronic locking differential make the T2 the premier off-road companion.</p>
+      </article>
+      <article class="content-card-box" style="margin-bottom: 0;">
+        <span style="font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase;">Electric Luxury</span>
+        <h3 style="font-size: 18px; font-weight: 800; margin: 8px 0;">Deepal S07: The 385-Mile Aerodynamic EV</h3>
+        <p style="font-size: 14px; color: var(--text-sub); line-height: 1.6;">Exploring the sunflower rotating 15.6-inch cockpit, 0.258 Cd coefficient, and cloud zero-gravity seating.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Simple, Minimalist Footer (Excess Widgets Removed)
+       ======================================================================== -->
+  <footer class="simple-footer">
+    <div class="simple-footer-inner">
+      <div class="simple-footer-brand">
+        <img src="assets/ev-boss-logo-light.png" alt="EV BOSS" style="height: 38px; width: auto;">
+      </div>
+
+      <div class="simple-footer-contact">
+        <a href="tel:055167104" class="simple-contact-item" title="Call Us Directly">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          055167104
+        </a>
+
+        <a href="mailto:wonder.ahiable@gmail.com" class="simple-contact-item" title="Email Executive Concierge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"/>
+          </svg>
+          wonder.ahiable@gmail.com
+        </a>
+      </div>
+
+      <div class="simple-footer-copy">
+        © 2026 EV BOSS Inc. All rights reserved. Direct Inquiries: 055167104 • wonder.ahiable@gmail.com
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Interactive Vehicle Detail Modal ("SEE MORE ↘")
+       ======================================================================== -->
+  <div class="modal-overlay" id="vehicleDetailModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeDetailModal" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+        <div class="modal-car-grid">
+          <!-- Car Display Visual -->
+          <div class="modal-car-gallery">
+            <img id="modalImg" class="modal-car-img" src="" alt="Vehicle visual">
+          </div>
+
+          <!-- Vehicle Information -->
+          <div class="modal-car-info">
+            <div class="modal-car-badge-row">
+              <span class="card-badge" id="modalBadge">NEW</span>
+              <span class="card-deal-type" id="modalDealType" style="font-size: 12px;">AVAILABLE</span>
+            </div>
+            <h2 id="modalTitle">Vehicle Name</h2>
+
+            <div style="margin: 12px 0 16px; padding: 10px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Purchase Price</span>
+              <span id="modalBuyPrice" style="font-size: 24px; font-weight: 800; color: var(--dark);">$0</span>
+            </div>
+
+            <p id="modalDesc" class="modal-desc"></p>
+          </div>
+        </div>
+
+        <!-- Technical Specifications Table -->
+        <h4 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">Factory Specifications & Equipment</h4>
+        <table class="modal-specs-table">
+          <tbody id="modalSpecsBody">
+            <!-- Dynamically generated -->
+          </tbody>
+        </table>
+
+        <!-- Interactive Financing Calculator -->
+        <div class="modal-calculator-wrap" id="modalCalculator">
+          <!-- Dynamically generated in app.js -->
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="calc-actions">
+          <button class="btn-primary-action trigger-contact" onclick="inquirePurchaseFromModal()">
+            Request Test Drive & Purchase Consultation
+          </button>
+          <a href="tel:055167104" class="btn-secondary-action" style="display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">
+            📞 Call 055167104
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Interactive Contact Modal ("CONTACT")
+       ======================================================================== -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-dialog" style="max-width: 540px;">
+      <button class="modal-close-btn" id="closeContactModal" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h2 style="font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 6px;">Connect with EV BOSS</h2>
+          <p style="font-size: 14px; color: var(--text-sub);">Direct VIP sales & test-drive concierge.</p>
+          
+          <div style="margin-top: 12px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <a href="tel:055167104" style="display: inline-flex; align-items: center; gap: 6px; background: #000; color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; text-decoration: none;">
+              📞 055167104
+            </a>
+            <a href="mailto:wonder.ahiable@gmail.com" style="display: inline-flex; align-items: center; gap: 6px; background: var(--primary-light); color: #b4710b; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; text-decoration: none;">
+              ✉ wonder.ahiable@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="leadContactForm">
+          <div class="form-group">
+            <label for="contactName">Full Name *</label>
+            <input type="text" id="contactName" class="form-control" required placeholder="Your Full Name">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" class="form-control" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number *</label>
+              <input type="tel" id="contactPhone" class="form-control" required placeholder="055167104">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactVehicleSelect">Select Vehicle of Interest</label>
+            <select id="contactVehicleSelect" class="form-control">
+              <!-- Dynamically populated with Jetour & Deepal -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactInquiryType">Inquiry Type</label>
+            <select id="contactInquiryType" class="form-control">
+              <option value="test_drive">Schedule VIP Test Drive</option>
+              <option value="purchase">Purchase Inquiry & Financing</option>
+              <option value="specs">Detailed Brochure & Availability</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message or Questions</label>
+            <textarea id="contactMessage" class="form-control" rows="3" placeholder="Preferred appointment date, custom options, or questions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary-action" style="padding: 14px; font-size: 15px; margin-top: 8px;">
+            Send Inquiry to VIP Concierge
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
